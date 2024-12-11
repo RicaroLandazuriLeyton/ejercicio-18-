@@ -1,0 +1,49 @@
+ 
+
+import math 
+
+  
+
+A = float(input("Ingrese el coeficiente A: ")) 
+
+B = float(input("Ingrese el coeficiente B: ")) 
+
+C = float(input("Ingrese el coeficiente C: ")) 
+
+ 
+
+if A == 0: 
+
+    print("No es una ecuación de segundo grado.") 
+
+else: 
+
+    
+    discriminante = B**2 - 4 * A * C 
+  
+
+    if discriminante > 0:  
+
+        x1 = (-B + math.sqrt(discriminante)) / (2 * A) 
+
+        x2 = (-B - math.sqrt(discriminante)) / (2 * A) 
+
+        print(f"Dos soluciones reales: x1 = {x1:.2f}, x2 = {x2:.2f}") 
+
+    elif discriminante == 0:        
+
+        x = -B / (2 * A) 
+
+        print(f"Una solución real: x = {x:.2f}") 
+
+    else: 
+
+      
+
+        parte_real = -B / (2 * A) 
+
+        parte_imaginaria = math.sqrt(-discriminante) / (2 * A) 
+
+        print(f"Dos soluciones complejas: x1 = {parte_real:.2f} + {parte_imaginaria:.2f}i") 
+
+        print(f"y x2 = {parte_real:.2f} - {parte_imaginaria:.2f}i") 
