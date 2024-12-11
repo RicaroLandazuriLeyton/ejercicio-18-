@@ -1,0 +1,22 @@
+import math 
+
+
+lado = float(input("Ingrese el valor del lado del triángulo equilátero: ")) 
+ 
+
+perimetro = 3 * lado 
+
+  
+altura = (math.sqrt(3) / 2) * lado 
+  
+
+area = (lado * altura) / 2 
+  
+
+print("\n--- Resultados del triángulo equilátero ---") 
+
+print(f"Perímetro: {perimetro:.2f}") 
+
+print(f"Altura: {altura:.2f}") 
+
+print(f"Área: {area:.2f}") 
