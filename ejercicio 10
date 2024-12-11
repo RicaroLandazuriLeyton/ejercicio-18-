@@ -1,0 +1,21 @@
+NI = input("Ingrese el número de inscripción: ") 
+
+NOM = input("Ingrese el nombre del estudiante: ") 
+
+PAT = float(input("Ingrese el patrimonio del estudiante: ")) 
+
+EST = int(input("Ingrese el estrato social del estudiante: ")) 
+  
+
+PAGMAT = 50000 
+  
+
+if PAT > 2000000 and EST > 3: 
+
+    PAGMAT += 0.03 * PAT 
+
+
+
+print("\n--- Liquidación de matrícula ---") 
+
+print(f"El estudiante con número de inscripción {NI} y nombre {NOM} debe pagar: ${PAGMAT:,.2f}") 
