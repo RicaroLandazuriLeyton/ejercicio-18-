@@ -1,0 +1,29 @@
+NOM = input("Ingrese el nombre del trabajador: ") 
+
+NHT = int(input("Ingrese el número de horas trabajadas en la semana: ")) 
+
+VHN = float(input("Ingrese el valor recibido por una hora normal de trabajo: ")) 
+
+ 
+
+if NHT > 40:  # Existen horas extras 
+
+    HET = NHT - 40  # Horas extras trabajadas 
+
+    if HET > 8:  # Horas extras mayores a 8 
+
+        HEE8 = HET - 8  # Horas extras que exceden de 8 
+
+        SALARIO = 40 * VHN + 16 * VHN + HEE8 * 3 * VHN 
+
+    else:  # Horas extras menores o iguales a 8 
+
+        SALARIO = 40 * VHN + HET * 2 * VHN 
+
+else:  # No hay horas extras 
+
+    SALARIO = NHT * VHN 
+
+  
+
+print(f"\nEl trabajador {NOM} devengó: ${SALARIO:,.2f}") 
